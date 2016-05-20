@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+	
+	<title>HCI 2016 - Apotek</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+
+
+	<!-- Bootstrap Theme CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="assets/css/magister.css">
+
+	<!-- Fonts -->
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/fontWireOne.css">
+</head>
+
+<!-- use "theme-invert" class on bright backgrounds, also try "text-shadows" class -->
+<body onload="SetDate();" class="text-shadows">
+
+<nav class="mainmenu">
+	<div class="container">
+		<div class="dropdown">
+			<button type="button" class="navbar-toggle" data-toggle="dropdown"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			<!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+				<li><a href="#head" class="active">Home</a></li>
+				<li><a href="#obat">Daftar Obat</a></li>
+				<li><a href="#kasir">Pembelian - Kasir</a></li>
+				<li><a href="#riwayat">Riwayat Penjualan</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+<!-- Bagian halaman Home -->
+<section class="section" id="head">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">	
+
+				<!-- Judul -->
+				<h1 class="title">Apotek</h1>
+				<h2 class="subtitle">Aplikasi Sistem Apotek</h2>
+
+				<!-- Bagian Isi -->
+				<h3 class="tagline">
+					Aplikasi  ini dibuat untuk memenuhi tugas kuliah.<br>
+					Teknik Elektro HCI - 2016.
+				</h3>
+				
+	
+			</div> <!-- /col -->
+		</div> <!-- /row -->
+	
+	</div>
+</section>
+
+<!-- Bagian halaman obat -->
+<section class="section" id="obat">
+	<div class="container">
+	
+		<h2 class="text-center title">Daftar Obat</h2>
+
+		 <div class="container">
+
+		 <div class="row">
+		 <!-- tombol tambah obat -->
+		 	<a href="#" class="btn btn-info" role="button">Tambah Obat</a>
+
+
+		 	<form class="navbar-form navbar-right" role="search">
+  <div class="form-group">
+    <input type="search" class="form-control" id="search" placeholder="Masukkan Nama Obat">
+  </div>
+  <a href="#" type="submit" class="btn btn-default">Cari</a>
+</form>	   
+</div>
+					 <!-- Membuat tabel -->
+					 <table class="table table-hover">
+
+                              <thead>                  	  
+                              <tr>
+                                  <th>No.</th>
+                                  <th>Kode Obat</th>
+                                  <th>Nama Obat</th>
+                                  <th>Harga</th>
+								  <th>Keterangan</th>
+								  <th>Aksi</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                  <td>1.</td>
+								  <td>OBT-0123</td>
+                                  <td>Parasetamol</td>
+                                  <td>Rp. 2.000</td>
+                                  <td>Tersedia</td>
+								  <td>
+								 <a href="#" class="btn btn-success" role="button">Edit</a>
+								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								 </td>
+                              </tr>
+                              <tr>
+                                  <td>2.</td>
+								  <td>OBT-0011</td>
+                                  <td>Sanmol</td>
+                                  <td>Rp. 2.500</td>
+                                  <td>Tersedia</td>
+								  <td>
+								  <a href="#" class="btn btn-success" role="button">Edit</a>
+								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								 </td>
+                              </tr>
+                              <tr>
+                                  <td>3.</td>
+								  <td>OBT-2201</td>
+                                  <td>Konidin</td>
+                                  <td>Rp. 5.000</td>
+                                  <td>Tersedia</td>
+								  <td>
+								 <a href="#" class="btn btn-success" role="button">Edit</a>
+								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								  </td>
+                              </tr>
+                              <tr>
+                                  <td>4.</td>
+								  <td>OBT-1990</td>
+                                  <td>Oskadon</td>
+                                  <td>Rp. 3.000</td>
+                                  <td>Tersedia</td>
+								  <td>
+								 <a href="#" class="btn btn-success" role="button">Edit</a>
+								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								  </td>
+                              </tr>
+                              <tr>
+                                  <td>5.</td>
+								  <td>OBT-9800</td>
+                                  <td>Sanaflu</td>
+                                  <td>Rp. 3.000</td>
+                                  <td>Kosong</td>
+								  <td>
+								 <a href="#" class="btn btn-success" role="button">Edit</a>
+								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								  </td>
+                              </tr>
+                              <tr>
+                                  <td>6.</td>
+								  <td>OBT-5543</td>
+                                  <td>Amoxylin</td>
+                                  <td>Rp. 5.000</td>
+                                  <td>Tersedia</td>
+								  <td>
+								 <a href="#" class="btn btn-success" role="button">Edit</a>
+								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								  </td>
+                              </tr>
+                              <tr>
+                                  <td>7.</td>
+								  <td>OBT-2828</td>
+                                  <td>Sangobion</td>
+                                  <td>Rp. 12.000</td>
+                                  <td>Kosong</td>
+								  <td>
+								 <a href="#" class="btn btn-success" role="button">Edit</a>
+								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								  </td>
+                              </tr>
+                              <tr>
+                                  <td>8.</td>
+								  <td>OBT-1929</td>
+                                  <td>Asamefetanat</td>
+                                  <td>Rp. 3.500</td>
+                                  <td>Tersedia</td>
+								  <td>
+								 <a href="#" class="btn btn-success" role="button">Edit</a>
+								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								  </td>
+                              </tr>
+                              <tr>
+                                  <td>9.</td>
+								  <td>OBT-2219</td>
+                                  <td>Amocomb</td>
+                                  <td>Rp. 4.000</td>
+                                  <td>Tersedia</td>
+								  <td>
+								 <a href="#" class="btn btn-success" role="button">Edit</a>
+								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								  </td>
+                              </tr>
+                              <tr>
+                                  <td>10.</td>
+								  <td>OBT-4521</td>
+                                  <td>Amostat</td>
+                                  <td>Rp. 3.000</td>
+                                  <td>Tersedia</td>
+								  <td>
+								 <a href="#" class="btn btn-success" role="button">Edit</a>
+								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								  </td>
+                              </tr>
+                              </tbody>                              
+                          </table>
+                           <!-- membuat pagination -->	
+                           <div align="right">						
+								  <ul class="pagination">
+								    <li>
+								      <a href="#" aria-label="Previous">
+								        <span aria-hidden="true">&laquo;</span>
+								      </a>
+								    </li>
+								    <li  class="active"><a href="#">1</a></li>
+								    <li><a href="#">2</a></li>
+								    <li><a href="#">3</a></li>
+								    <li><a href="#">4</a></li>
+								    <li><a href="#">5</a></li>
+								    <li>
+								      <a href="#" aria-label="Next">
+								        <span aria-hidden="true">&raquo;</span>
+								      </a>
+								    </li>
+								  </ul>
+								  </div>
+                          
+                  </div>
+	</div>
+</section>
+
+
+<!-- Bagian halaman kasir-->
+<section class="section" id="kasir">
+	<div class="container">
+	
+		<h2 class="text-center title">Pembelian</h2>
+
+		<p id="demo"></p>
+
+		<div class="row">
+
+		<table border=0 cellpadding=5 cellspacing=0>
+			<tr>
+				<td>Tanggal</td>
+				<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+				<td><input type="date" id="myDate" size="80" disabled></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>Nama</td>
+				<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+				<td><input type="text" name="tanggal" placeholder="Masukkan Nama Pembeli" size="80"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>Alamat</td>
+				<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+				<td><input type="text" name="tanggal" placeholder="Alamat Pembeli" size="80"></td>
+			</tr>
+			<tr>
+			<td>&nbsp;</td>
+			</tr>
+		</table>
+
+		<a href="#" class="btn btn-info" role="button">Cetak</a>
+
+		<div class="row">
+
+			<form class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Cari Obat">
+  </div>
+  <a class="btn btn-default">Tambah</a>
+</form>	   
+
+		</div>
+
+		 <table class="table table-hover">
+
+                              <thead>                  	  
+                              <tr>
+                                  <th>No.</th>
+                                  <th>Kode Obat</th>
+                                  <th>Nama Obat</th>
+                                  <th>Jumlah</th>
+                                  <th>Harga @</th>
+                                  <th>Harga</th>
+								  <th>Diskon</th>
+								  <th>Total</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                  <td>1.</td>
+                                  <td>OBT-0123</td>
+                                  <td>Parasetamol</td>
+                                  <td>2</td>
+                                  <td>Rp. 2.000</th>
+                                  <td>Rp. 4.000</th>
+								  <td>5%</td>
+								  <td>Rp. 3.800</td>
+                              </tr>
+                              <tr>
+                                  <td>2.</td>
+                                  <td>OBT-1929</td>
+                                  <td>Asamefetanat</td>
+                                  <td>2</td>
+                                  <td>Rp. 3.500</td>
+                                  <td>Rp. 7.000</td>
+								  <td>5%</td>
+								  <td>Rp. 6.650</td>
+                              </tr>
+                              <tr>
+                              <th colspan="7"></th>
+                              <th>Rp. 10.450</th>
+                              </tr>
+                              </tbody>                              
+                          </table>
+            </div>
+
+	</div>
+</section>
+
+<!-- Bagian halaman riwayat -->
+<section class="section" id="riwayat">
+	<div class="container">
+	
+		<h2 class="text-center title">Riwayat Pembelian</h2>
+
+		<div class="row">
+		<select style="width: 147px">		
+			<option value="Filter" selected="selected" style="display:none;" disabled>Filter</option>
+			<option value="Hari Ini">Hari ini</option>
+			<option value="Kemarin">Kemarin</option>
+			<option value="Seminggu Terakhir">Seminggu Terakhir</option>
+			<option value="Sebulan Terakhir">Sebulan Terakhir</option>
+		</select>
+			<table class="table table-hover">
+
+                              <thead>                  	  
+                              <tr>
+                                  <th>No.</th>
+                                  <th>Tanggal</th>
+                                  <th>Nama Pembeli</th>
+                                  <th>Total Harga</th>
+                                  <th>Aksi</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                  <td>1.</td>
+                                  <td>18-05-2016</td>
+                                  <td>Wahyu</td>
+                                  <td>Rp. 10.450</td>
+                                  <td>
+                                  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Detail</button>
+                                  </td>
+
+                              </tr>
+                              <tr>
+                                  <td>2.</td>
+                                  <td>19-05-2016</td>
+                                  <td>Amir</td>
+                                  <td>Rp. 14.250</td>
+                                  <td>
+                                  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2">Detail</button>
+                                  </td>
+                              </tr>
+                              </tbody>                              
+                          </table>
+                          <div align="right">						
+								  <ul class="pagination">
+								    <li>
+								      <a href="#" aria-label="Previous">
+								        <span aria-hidden="true">&laquo;</span>
+								      </a>
+								    </li>
+								    <li  class="active"><a href="#">1</a></li>
+								    <li><a href="#">2</a></li>
+								    <li><a href="#">3</a></li>
+								    <li><a href="#">4</a></li>
+								    <li><a href="#">5</a></li>
+								    <li>
+								      <a href="#" aria-label="Next">
+								        <span aria-hidden="true">&raquo;</span>
+								      </a>
+								    </li>
+								  </ul>
+								  </div>
+		</div>
+
+	</div>
+</section>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Detail Pembelian</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-hover">
+
+                              <thead>                  	  
+                              <tr>
+                                  <th>No.</th>
+                                  <th>Kode Obat</th>
+                                  <th>Nama Obat</th>
+                                  <th>Jumlah</th>
+                                  <th>Harga @</th>
+                                  <th>Harga</th>
+								  <th>Diskon</th>
+								  <th>Total</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                  <td>1.</td>
+                                  <td>OBT-0123</td>
+                                  <td>Parasetamol</td>
+                                  <td>2</td>
+                                  <td>Rp. 2.000</th>
+                                  <td>Rp. 4.000</th>
+								  <td>5%</td>
+								  <td>Rp. 3.800</td>
+                              </tr>
+                              <tr>
+                                  <td>2.</td>
+                                  <td>OBT-1929</td>
+                                  <td>Asamefetanat</td>
+                                  <td>2</td>
+                                  <td>Rp. 3.500</td>
+                                  <td>Rp. 7.000</td>
+								  <td>5%</td>
+								  <td>Rp. 6.650</td>
+                              </tr>
+                              <tr>
+                              <th colspan="7"></th>
+                              <th>Rp. 10.450</th>
+                              </tr>
+                              </tbody>                              
+                          </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Detail Pembelian</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-hover">
+
+                              <thead>                  	  
+                              <tr>
+                                  <th>No.</th>
+                                  <th>Kode Obat</th>
+                                  <th>Nama Obat</th>
+                                  <th>Jumlah</th>
+                                  <th>Harga @</th>
+                                  <th>Harga</th>
+								  <th>Diskon</th>
+								  <th>Total</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                  <td>1.</td>
+                                  <td>OBT-0011</td>
+                                  <td>Sanmol</td>
+                                  <td>2</td>
+                                  <td>Rp. 2.500</th>
+                                  <td>Rp. 5.000</th>
+								  <td>5%</td>
+								  <td>Rp. 4.750</td>
+                              </tr>
+                              <tr>
+                                  <td>2.</td>
+                                  <td>OBT-2201</td>
+                                  <td>Konidin</td>
+                                  <td>2</td>
+                                  <td>Rp. 5.000</td>
+                                  <td>Rp. 10.000</td>
+								  <td>5%</td>
+								  <td>Rp. 9.500</td>
+                              </tr>
+                              <tr>
+                              <th colspan="7"></th>
+                              <th>Rp. 14.250</th>
+                              </tr>
+                              </tbody>                              
+                          </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Load js libs only when the page is loaded. -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+
+
+
+<script src="assets/js/modernizr.custom.72241.js"></script>
+<!-- Custom template scripts -->
+<script src="assets/js/magister.js"></script>
+<script src="assets/js/moment.min.js"></script>
+<script type="text/javascript">
+function SetDate()
+{
+var date = new Date();
+
+var day = date.getDate();
+var month = date.getMonth() + 1;
+var year = date.getFullYear();
+
+if (month < 10) month = "0" + month;
+if (day < 10) day = "0" + day;
+
+var today = day + "-" + month + "-" + year;
+
+
+document.getElementById('myDate').value = today;
+}
+</script>
+
+<script >
+ var $rows = $('#table tbody');
+$('#search').keyup(function() {
+    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+    
+    $rows.show().filter(function() {
+        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+        return !~text.indexOf(val);
+    }).hide();
+});
+</script>
+
+</body>
+</html>
