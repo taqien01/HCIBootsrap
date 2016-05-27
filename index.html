@@ -18,18 +18,23 @@
 	<!-- Custom styles -->
 	<link rel="stylesheet" href="assets/css/magister.css">
 
+
+	<!-- Table styles -->
+	<link rel="stylesheet" href="assets/css/jquery.dataTables.css">
+
 	<!-- Fonts -->
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/fontWireOne.css">
 </head>
 
 <!-- use "theme-invert" class on bright backgrounds, also try "text-shadows" class -->
-<body onload="SetDate();" class="text-shadows">
+<body onload="SetDate();" class="theme-invert">
 
+<!-- Menu NAvbar -->
 <nav class="mainmenu">
 	<div class="container">
 		<div class="dropdown">
-			<button type="button" class="navbar-toggle" data-toggle="dropdown"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			<button type="button" class="navbar-toggle" data-toggle="dropdown"><b>Menu Bar</b></button>
 			<!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
 			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 				<li><a href="#head" class="active">Home</a></li>
@@ -43,7 +48,7 @@
 
 
 <!-- Bagian halaman Home -->
-<section class="section" id="head">
+<section class="section" id="riwayat">
 	<div class="container">
 
 		<div class="row">
@@ -72,22 +77,37 @@
 	
 		<h2 class="text-center title">Daftar Obat</h2>
 
-		 <div class="container">
+		<div class="container">
 
-		 <div class="row">
-		 <!-- tombol tambah obat -->
-		 	<a href="#" class="btn btn-info" role="button">Tambah Obat</a>
+			<div class="row">
+			 	<!-- tombol tambah obat -->
+			 	<button class="btn btn-info" data-toggle="modal" data-target="#tambah" role="button">Tambah Obat</button>
+				<p>&nbsp;</p>
+			</div>
+				<div class="container">
+
+					 <!-- Class Alert -->
+						 	<!-- Alert Tambah Data -->
+						 	<div id="tambahAlert" class="collapse alert alert-success">
+						 		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	   							 <strong>Berhasil!</strong> Data Telah Ditambahkan
+	  						</div>
+
+	  						<!-- Alert Tambah Data -->
+						 	<div id="hapusAlert" class="collapse alert alert-danger">
+							 	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		   						 <strong>Berhasil!</strong> Data Telah Dihapus
+	  						</div>
+
+	  						<!-- Alert Edit Data -->
+						 	<div id="editAlert" class="collapse alert alert-success">
+							 	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		   						 <strong>Berhasil!</strong> Data Telah Diubah
+	  						</div>
 
 
-		 	<form class="navbar-form navbar-right" role="search">
-  <div class="form-group">
-    <input type="search" class="form-control" id="search" placeholder="Masukkan Nama Obat">
-  </div>
-  <a href="#" type="submit" class="btn btn-default">Cari</a>
-</form>	   
-</div>
 					 <!-- Membuat tabel -->
-					 <table class="table table-hover">
+					<table id="example1" class="table table-hover">
 
                               <thead>                  	  
                               <tr>
@@ -107,8 +127,8 @@
                                   <td>Rp. 2.000</td>
                                   <td>Tersedia</td>
 								  <td>
-								 <a href="#" class="btn btn-success" role="button">Edit</a>
-								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								 <button class="btn btn-success" data-toggle="modal" data-target="#edit" role="button">Edit</button>
+								 <button class="btn btn-danger" data-toggle="modal" data-target="#delete" role="button">Hapus</button>
 								 </td>
                               </tr>
                               <tr>
@@ -118,8 +138,8 @@
                                   <td>Rp. 2.500</td>
                                   <td>Tersedia</td>
 								  <td>
-								  <a href="#" class="btn btn-success" role="button">Edit</a>
-								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								 <button class="btn btn-success" data-toggle="modal" data-target="#edit" role="button">Edit</button>
+								 <button class="btn btn-danger" data-toggle="modal" data-target="#delete" role="button">Hapus</button>
 								 </td>
                               </tr>
                               <tr>
@@ -129,8 +149,8 @@
                                   <td>Rp. 5.000</td>
                                   <td>Tersedia</td>
 								  <td>
-								 <a href="#" class="btn btn-success" role="button">Edit</a>
-								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								 <button class="btn btn-success" data-toggle="modal" data-target="#edit" role="button">Edit</button>
+								 <button class="btn btn-danger" data-toggle="modal" data-target="#delete" role="button">Hapus</button>
 								  </td>
                               </tr>
                               <tr>
@@ -140,8 +160,8 @@
                                   <td>Rp. 3.000</td>
                                   <td>Tersedia</td>
 								  <td>
-								 <a href="#" class="btn btn-success" role="button">Edit</a>
-								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								 <button class="btn btn-success" data-toggle="modal" data-target="#edit" role="button">Edit</button>
+								 <button class="btn btn-danger" data-toggle="modal" data-target="#delete" role="button">Hapus</button>
 								  </td>
                               </tr>
                               <tr>
@@ -151,8 +171,8 @@
                                   <td>Rp. 3.000</td>
                                   <td>Kosong</td>
 								  <td>
-								 <a href="#" class="btn btn-success" role="button">Edit</a>
-								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								 <button class="btn btn-success" data-toggle="modal" data-target="#edit" role="button">Edit</button>
+								 <button class="btn btn-danger" data-toggle="modal" data-target="#delete" role="button">Hapus</button>
 								  </td>
                               </tr>
                               <tr>
@@ -162,8 +182,8 @@
                                   <td>Rp. 5.000</td>
                                   <td>Tersedia</td>
 								  <td>
-								 <a href="#" class="btn btn-success" role="button">Edit</a>
-								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								 <button class="btn btn-success" data-toggle="modal" data-target="#edit" role="button">Edit</button>
+								 <button class="btn btn-danger" data-toggle="modal" data-target="#delete" role="button">Hapus</button>
 								  </td>
                               </tr>
                               <tr>
@@ -173,8 +193,8 @@
                                   <td>Rp. 12.000</td>
                                   <td>Kosong</td>
 								  <td>
-								 <a href="#" class="btn btn-success" role="button">Edit</a>
-								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								 <button class="btn btn-success" data-toggle="modal" data-target="#edit" role="button">Edit</button>
+								 <button class="btn btn-danger" data-toggle="modal" data-target="#delete" role="button">Hapus</button>
 								  </td>
                               </tr>
                               <tr>
@@ -184,8 +204,8 @@
                                   <td>Rp. 3.500</td>
                                   <td>Tersedia</td>
 								  <td>
-								 <a href="#" class="btn btn-success" role="button">Edit</a>
-								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								 <button class="btn btn-success" data-toggle="modal" data-target="#edit" role="button">Edit</button>
+								 <button class="btn btn-danger" data-toggle="modal" data-target="#delete" role="button">Hapus</button>
 								  </td>
                               </tr>
                               <tr>
@@ -195,8 +215,8 @@
                                   <td>Rp. 4.000</td>
                                   <td>Tersedia</td>
 								  <td>
-								 <a href="#" class="btn btn-success" role="button">Edit</a>
-								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								 <button class="btn btn-success" data-toggle="modal" data-target="#edit" role="button">Edit</button>
+								 <button class="btn btn-danger" data-toggle="modal" data-target="#delete" role="button">Hapus</button>
 								  </td>
                               </tr>
                               <tr>
@@ -206,37 +226,39 @@
                                   <td>Rp. 3.000</td>
                                   <td>Tersedia</td>
 								  <td>
-								 <a href="#" class="btn btn-success" role="button">Edit</a>
-								 <a href="#" class="btn btn-danger" role="button">Hapus</a>
+								 <button class="btn btn-success" data-toggle="modal" data-target="#edit" role="button">Edit</button>
+								 <button class="btn btn-danger" data-toggle="modal" data-target="#delete" role="button">Hapus</button>
+								  </td>
+                              </tr>
+                              <tr>
+                                  <td>11.</td>
+								  <td>OBT-1673</td>
+                                  <td>Inzana</td>
+                                  <td>Rp. 4.500</td>
+                                  <td>Tersedia</td>
+								  <td>
+								 <button class="btn btn-success" data-toggle="modal" data-target="#edit" role="button">Edit</button>
+								 <button class="btn btn-danger" data-toggle="modal" data-target="#delete" role="button">Hapus</button>
+								  </td>
+                              </tr>
+                              <tr>
+                                  <td>12.</td>
+								  <td>OBT-9018</td>
+                                  <td>Mixagrip</td>
+                                  <td>Rp. 5.000</td>
+                                  <td>Tersedia</td>
+								  <td>
+								 <button class="btn btn-success" data-toggle="modal" data-target="#edit" role="button">Edit</button>
+								 <button class="btn btn-danger" data-toggle="modal" data-target="#delete" role="button">Hapus</button>
 								  </td>
                               </tr>
                               </tbody>                              
-                          </table>
-                           <!-- membuat pagination -->	
-                           <div align="right">						
-								  <ul class="pagination">
-								    <li>
-								      <a href="#" aria-label="Previous">
-								        <span aria-hidden="true">&laquo;</span>
-								      </a>
-								    </li>
-								    <li  class="active"><a href="#">1</a></li>
-								    <li><a href="#">2</a></li>
-								    <li><a href="#">3</a></li>
-								    <li><a href="#">4</a></li>
-								    <li><a href="#">5</a></li>
-								    <li>
-								      <a href="#" aria-label="Next">
-								        <span aria-hidden="true">&raquo;</span>
-								      </a>
-								    </li>
-								  </ul>
-								  </div>
+                    </table>
+                </div>
                           
-                  </div>
+         </div>
 	</div>
 </section>
-
 
 <!-- Bagian halaman kasir-->
 <section class="section" id="kasir">
@@ -260,7 +282,7 @@
 			<tr>
 				<td>Nama</td>
 				<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
-				<td><input type="text" name="tanggal" placeholder="Masukkan Nama Pembeli" size="80"></td>
+				<td><input type="text" id="nama" name="tanggal" placeholder="Masukkan Nama Pembeli" size="80" autocomplete="off"></td>
 			</tr>
 			<tr>
 				<td>&nbsp;</td>
@@ -268,23 +290,23 @@
 			<tr>
 				<td>Alamat</td>
 				<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
-				<td><input type="text" name="tanggal" placeholder="Alamat Pembeli" size="80"></td>
+				<td><input type="text" id="alamat" name="tanggal" placeholder="Alamat Pembeli" size="80" autocomplete="off"></td>
 			</tr>
 			<tr>
 			<td>&nbsp;</td>
 			</tr>
 		</table>
 
-		<a href="#" class="btn btn-info" role="button">Cetak</a>
+		<button class="btn btn-info" onclick="cetakData()" data-toggle="modal" data-target="#kasirCetak" role="button">Cetak</button>
 
 		<div class="row">
 
 			<form class="navbar-form navbar-left" role="search">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Cari Obat">
+    <input type="text" class="form-control" placeholder="Cari Obat" autocomplete="off">
   </div>
   <a class="btn btn-default">Tambah</a>
-</form>	   
+	</form>	   
 
 		</div>
 
@@ -335,14 +357,14 @@
 </section>
 
 <!-- Bagian halaman riwayat -->
-<section class="section" id="riwayat">
+<section class="section" id="head">
 	<div class="container">
 	
 		<h2 class="text-center title">Riwayat Pembelian</h2>
 
 		<div class="row">
 		<select style="width: 147px">		
-			<option value="Filter" selected="selected" style="display:none;" disabled>Filter</option>
+			<option value="Filter" selected style="display:none;" disabled>Filter</option>
 			<option value="Hari Ini">Hari ini</option>
 			<option value="Kemarin">Kemarin</option>
 			<option value="Seminggu Terakhir">Seminggu Terakhir</option>
@@ -405,6 +427,7 @@
 	</div>
 </section>
 
+<!-- Modal Detail 1 -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -460,6 +483,9 @@
     </div>
   </div>
 </div>
+
+
+<!-- Modal Detail 2 -->
 
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -518,47 +544,308 @@
 </div>
 
 
-<!-- Load js libs only when the page is loaded. -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<!-- Modal Tambah -->
+<div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Tambah Obat</h4>
+      </div>
+      <div class="modal-body">
+      	<table align="center" border=0 cellpadding=5 cellspacing=0>
+			<tr>
+				<td>Kode Obat</td>
+				<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>Nama Obat</td>
+				<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>Harga</td>
+				<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>Keterangan</td>
+				<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+				<td>
+				<select>
+				<option>Tersedia</option>
+				<option>Kosong</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+			<td>&nbsp;</td>
+			</tr>
+		</table>
+      </div>
+      <div class="modal-footer">      
+        <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#tambahAlert" data-dismiss="modal">Tambah</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Delete -->
+<div class="modal fade bs-example-modal-sm" id="delete" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Delete</h4>
+      </div>
+      <div class="modal-body">
+        <p>Anda Yakin Ingin Menghapus Baris Ini ?</p>
+      </div>
+      <div class="modal-footer">      
+        <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#hapusAlert" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edit -->
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Edit Data Obat</h4>
+      </div>
+      <div class="modal-body">
+      <table align="center" border=0 cellpadding=5 cellspacing=0>
+			<tr>
+				<td>Kode Obat</td>
+				<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+				<td><input type="text" value="OBT-0123"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>Nama Obat</td>
+				<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+				<td><input type="text" value="Parasetamol"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>Harga</td>
+				<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+				<td><input type="text" value="2.000"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>Keterangan</td>
+				<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+				<td>
+				<select>
+				<option>Tersedia</option>
+				<option>Kosong</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+			<td>&nbsp;</td>
+			</tr>
+		</table>
+      </div>
+      <div class="modal-footer">      
+        <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#editAlert" data-dismiss="modal">Simpan</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Kasir -->
+
+<div class="modal fade" id="kasirCetak" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Detail Pembelian</h4>
+      </div>
+      <div id="pdf" class="modal-body">
+
+      <table>
+      	<thead>
+      		<tr>
+      			<td>Tanggal</td>
+      			<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+      			<td  id="tanggalCetak"></td>
+      		</tr>
+      		<tr>
+      			<td>Nama</td>
+      			<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+      			<td id="namaCetak"></td>
+      		</tr>
+      		<tr>
+      			<td>Alamat</td>
+      			<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+      			<td id="alamatCetak"></td>
+      		</tr>
+      	</thead>
+      </table>
+        <table class="table table-hover">
+
+                              <thead>                  	  
+                              <tr>
+                                  <th>No.</th>
+                                  <th>Kode Obat</th>
+                                  <th>Nama Obat</th>
+                                  <th>Jumlah</th>
+                                  <th>Harga @</th>
+                                  <th>Harga</th>
+								  <th>Diskon</th>
+								  <th>Total</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                  <td>1.</td>
+                                  <td>OBT-0123</td>
+                                  <td>Parasetamol</td>
+                                  <td>2</td>
+                                  <td>Rp. 2.000</th>
+                                  <td>Rp. 4.000</th>
+								  <td>5%</td>
+								  <td>Rp. 3.800</td>
+                              </tr>
+                              <tr>
+                                  <td>2.</td>
+                                  <td>OBT-1929</td>
+                                  <td>Asamefetanat</td>
+                                  <td>2</td>
+                                  <td>Rp. 3.500</td>
+                                  <td>Rp. 7.000</td>
+								  <td>5%</td>
+								  <td>Rp. 6.650</td>
+                              </tr>
+                              <tr>
+                              <th colspan="7"></th>
+                              <th>Rp. 10.450</th>
+                              </tr>
+                              </tbody>                             
+                          </table>
+      </div>
+      <div class="modal-footer">       
+        <button type="button" onclick="openPDF()" class="btn btn-default" data-dismiss="modal">Cetak</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
 
-<script src="assets/js/modernizr.custom.72241.js"></script>
-<!-- Custom template scripts -->
-<script src="assets/js/magister.js"></script>
-<script src="assets/js/moment.min.js"></script>
-<script type="text/javascript">
-function SetDate()
-{
-var date = new Date();
-
-var day = date.getDate();
-var month = date.getMonth() + 1;
-var year = date.getFullYear();
-
-if (month < 10) month = "0" + month;
-if (day < 10) day = "0" + day;
-
-var today = day + "-" + month + "-" + year;
+<!-- JavaScript -->
+	<!-- Load js libs only when the page is loaded. -->
+	<script src="assets/js/jquery-2.2.3.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
 
 
-document.getElementById('myDate').value = today;
+
+
+	<script src="assets/js/modernizr.custom.72241.js"></script>
+	<!-- Custom template scripts -->
+	<script src="assets/js/magister.js"></script>
+	<script src="assets/js/moment.min.js"></script>
+
+	<!-- Table jquery -->
+	<script src="assets/js/jquery.dataTables.js"></script>
+
+	
+
+<!-- JS Cetak Data Untuk Mengirim Variable dari input -->
+<script>
+	function cetakData(){
+    document.getElementById("tanggalCetak").innerHTML = document.getElementById("myDate").value;
+    document.getElementById("namaCetak").innerHTML = document.getElementById("nama").value;    
+    document.getElementById("alamatCetak").innerHTML = document.getElementById("alamat").value;
 }
 </script>
 
-<script >
- var $rows = $('#table tbody');
-$('#search').keyup(function() {
-    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
-    
-    $rows.show().filter(function() {
-        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
-        return !~text.indexOf(val);
-    }).hide();
-});
+
+	<script type="text/javascript">
+	function SetDate()
+	{
+	var date = new Date();
+
+	var day = date.getDate();
+	var month = date.getMonth() + 1;
+	var year = date.getFullYear();
+
+	if (month < 10) month = "0" + month;
+	if (day < 10) day = "0" + day;
+
+	var today = day + "-" + month + "-" + year;
+
+
+	document.getElementById('myDate').value = today;
+	}
+	</script>
+
+
+	<script>
+	  $(function () {
+	    $("#example1").DataTable();
+	    $('#example2').DataTable({
+	      "paging": true,
+	      "lengthChange": false,
+	      "searching": false,
+	      "ordering": true,
+	      "info": true,
+	      "autoWidth": false
+	    });
+	  });
+	</script>
+
+<!---
+	<script type="text/javascript">
+function printPDF(pdfUrl) 
+{
+    var w = window.open("pdf");
+    w.print();
+}
 </script>
 
+-->
+
+<!-- Print Preview JS --> 
+		<script>
+			function openPDF() {
+		var yourDOCTYPE = "<!DOCTYPE html>"; // your doctype declaration
+		var printPreview = window.open('about:blank', 'print_preview', "resizable=yes,scrollbars=yes,status=yes");
+		var printDocument = printPreview.document;
+		printDocument.open();
+		printDocument.write(yourDOCTYPE+
+		           "<html>"+
+		               document.getElementById("pdf").innerHTML+
+		           "</html>");
+		printDocument.close();
+
+		}
+		window.openPP = openPP;
+		</script>
+<!-- -->
 </body>
 </html>
